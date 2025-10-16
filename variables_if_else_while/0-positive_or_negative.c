@@ -15,6 +15,6 @@ int main(void)
 	else if (n<0)
 		puts("is negative");
 	else
-		puts("is zero")
+		puts("is zero");
 	return (0);
 }
