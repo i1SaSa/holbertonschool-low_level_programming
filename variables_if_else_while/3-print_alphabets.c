@@ -12,8 +12,13 @@ int x;
 for (x = 'a' ; x <= 'z'; ++x)
 {
 putchar(x);
+}
+for (x = 'a' ; x <= 'z'; ++x)
+{
 putchar(toupper(x));
+
 }
 putchar('\n');
+
 return (0);
 }
