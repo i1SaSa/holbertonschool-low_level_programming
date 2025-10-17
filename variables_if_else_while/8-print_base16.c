@@ -1,10 +1,10 @@
 #include<stdio.h>
-/*
+/**
  *
- * a prgram that print all base 16 in lowercase
+ * main - prgram that print all base 16 in lowercase
  *
- *
- **/
+ * return 0
+ */
 int main(void)
 {
 int x;
