@@ -8,8 +8,9 @@
 */
 int _isupper(int c)
 {
+
 	if (isupper(c) > 0)
-		printf("%c: %d", c, isupper(c));
+		printf("%d", isupper(c));
 	else
 		printf("%c: %d", c, isupper(c));
 return (0);
