@@ -8,10 +8,11 @@
 */
 int _isupper(int c)
 {
-	if (isupper(c))
-		printf("%d is uppercase", c);
-	else
-		printf("%d is not uppercase", c);
-return (0);
+
+  if (isupper(c))
+    printf("%c is %d", c, isupper(c));
+  else
+    printf("%c is %d", c, isupper(c));
+  return (0);
 
 }
