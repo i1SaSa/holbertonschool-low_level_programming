@@ -10,9 +10,9 @@ int _isupper(int c)
 {
 
   if (isupper(c))
-    printf("%c is %d", c, isupper(c));
+    printf("%c: %d", c, isupper(c));
   else
-    printf("%c is %d", c, isupper(c));
+    printf("%c: %d", c, isupper(c));
   return (0);
 
 }
