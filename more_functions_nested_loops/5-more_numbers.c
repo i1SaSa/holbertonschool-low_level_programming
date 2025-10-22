@@ -7,13 +7,16 @@
 */
 void more_numbers(void)
 {
-	int itration;
-	int numbers;
+	int itration, numbers;
 
 	for (itration = 0; itration < 10; ++itration)
 	{
 		for (numbers = 0; numbers <= 14; ++numbers)
-		_putchar(numbers);
+		{
+			if (numbers > 9)
+				_putchar((numbers / 10) + '0');
+			_putchar((numbers % 10) + '0');
+		}
 	_putchar('\n');
 	}
 
