@@ -16,9 +16,9 @@ void print_triangle(int size)
                 _putchar(' ');
 		for (hash = 1; hash <= size; ++hash)
                 _putchar('#');
-		}
 		for (line = 0; line <= size; line++ )
 		_putchar('\n');
+		}
 	} else
 		_putchar('\n');
 }
