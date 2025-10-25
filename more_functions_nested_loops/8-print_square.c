@@ -11,11 +11,11 @@ void print_square(int size)
 
 	if (size > 0)
 	{
-		for (count = 0; count <= size; ++count)
+		for (line = 0; line <= size; ++line)
 		{
-			_putchar('#');
-			for (line = 0; line <= size; ++line)
-				_putchar('\n');
+			for (count = 0; count <= size; count++)
+				_putchar('#');
+			_putchar('\n');
 		}
 
 	} else
@@ -23,3 +23,4 @@ void print_square(int size)
 
 
 }
+
