@@ -18,10 +18,6 @@ void print_triangle(int size)
 
 			for (hash = 1; hash <= line; hash++)
 				_putchar('#');
-
-			if (hash == size)
-				continue;
-
 			_putchar('\n');
 		}
 	} else
