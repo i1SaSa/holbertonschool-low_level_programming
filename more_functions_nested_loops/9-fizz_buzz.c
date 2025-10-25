@@ -10,6 +10,7 @@ int main(void)
 	int numbers;
 
 	for (numbers = 1; numbers <= 100; ++numbers)
+	{
 		if (numbers % 3 == 0 && numbers % 5 == 0)
 			printf("FizzBuzz");
 		else if (numbers % 3 == 0)
@@ -18,5 +19,8 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d", numbers);
+		_putchar(' ');
+	}
+	_putchar('\n');
 	return (0);
 }
