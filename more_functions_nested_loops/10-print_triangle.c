@@ -11,13 +11,14 @@ void print_triangle(int size)
 	if (size > 0)
 	{
 
-		for (space = 0; space < size; ++space)
+		for (line = 0; line <= size; line++)
 		{
-                _putchar(' ');
-		for (line = 0; line <= size; line++ )
-		_putchar('\n');
-		for (hash = 1; hash <= size; ++hash)
-                _putchar('#');
+			for (space = size - line; space > 0; space--)
+                		_putchar(' ');
+
+			for (hash = 1; hash <= line; hash++)
+                		_putchar('#');
+			_putchar('\n');
 		}
 	} else
 		_putchar('\n');
