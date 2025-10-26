@@ -8,7 +8,7 @@
 */
 int _strlen(char *s)
 {
-printf("%ld", strlen(s));
+printf("%d", _strlen(s));
 
 
 
