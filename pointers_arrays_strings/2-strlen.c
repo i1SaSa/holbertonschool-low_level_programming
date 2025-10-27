@@ -5,15 +5,18 @@
 * strlen - scale lenght of a string
 *
 * @s: string
+* Return: 0
 */
 int _strlen(char *s)
 {
-  int len;
-  len = _strlen(s);
+	int len;
+	len = 0;
 
-printf("%d\n", len);
+	while (s[len] != '\0')
+	{
+		len += 1;
 
-
-
+		return len;
+	}
 return (0);
 }
