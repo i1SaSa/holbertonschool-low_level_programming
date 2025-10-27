@@ -8,7 +8,7 @@
 */
 void _puts(char *str)
 {
-	if (str == 0)
+	if (*str == '\0')
 		return;
 _puts(str);
 
