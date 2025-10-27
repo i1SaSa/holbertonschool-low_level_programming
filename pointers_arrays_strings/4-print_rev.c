@@ -4,15 +4,28 @@
 *
 * @s: string that will be reversed
 */
-void print_rev(char *s)
+void rev_string(char *s)
 {
-	int len = 0, index;
+	int count = 0, i, j;
+	char *str, temp;
 
-	while (s[index++])
-		len++;
+	while (count >= 0)
+	{
+		if (s[count] == '\0')
+			break;
+		count++;
+	}
+	str = s;
 
-	for (index = len - 1; index >= 0; index--)
-		_putchar(s[index]);
-
-	_putchar('\n');
+	for (i = 0; i < (count - 1); i++)
+	{
+		for (j = i + 1; j > 0; j--)
+		{
+			temp = *(str + j);
+			*(str + j) = *(str + (j - 1));
+			*(str + (j - 1)) = temp;
+		}
+	}
 }
+
+
