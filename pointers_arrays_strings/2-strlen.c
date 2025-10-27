@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
-* strlen - scale lenght of a string
+* _strlen - scale lenght of a string
 *
 * @s: string
 * Return: 0
