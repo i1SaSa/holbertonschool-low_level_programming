@@ -2,13 +2,16 @@
 #include <stdio.h>
 #include <string.h>
 /**
+* strlen - scale lenght of a string
 *
-*
-*
+* @s: string
 */
 int _strlen(char *s)
 {
-printf("%d", _strlen(s));
+  int len;
+  len = _strlen(s);
+
+printf("%d\n", len);
 
 
 
