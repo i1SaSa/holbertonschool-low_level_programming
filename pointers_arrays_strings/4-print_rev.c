@@ -3,6 +3,9 @@
  * print_rev - Prints a string in reverse.
  * @s: The string to be printed.
  */
+
+int _putchar(char c);
+
 void print_rev(char *s)
 {
 	int len = 0, index;
