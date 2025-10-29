@@ -16,12 +16,12 @@ int _putchar(char c);
 
 void print_rev(char *s)
 {
-	int len, i;
+	int len = 0;
 
-	while(*s)
-		++i;
+	while(s[len] != '\0')
+		++len;
 
-	for (len = i - 1; len >= 0; len--)
+	for (len = len - 1; len >= 0; len--)
 	{
 		_putchar(s[len]);
 	}
