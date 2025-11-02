@@ -8,7 +8,7 @@
  *
  * Return: A pointer to the filled memory area @s.
  */
-void *_memset(void *s, int c, size_t n)
+char *_memset(void *s, int c, size_t n)
 {
 	unsigned int index;
 	unsigned char *memory = s, value = c;
