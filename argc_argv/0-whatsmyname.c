@@ -3,7 +3,8 @@
  * main - print the program name
  *
  * Return: 0
- * @argc[]: file name
+ * @argc: NULL
+ * @argv: file name
 */
 int main(int argc, char *argv[])
 {
