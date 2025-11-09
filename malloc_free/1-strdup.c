@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+ * _strdup - copy the string in *str
  *
- *
- *
- *
+ *@str: the string will be copied
+ * Return : newstr
  */
 char *_strdup(char *str)
 {
@@ -27,7 +27,7 @@ char *_strdup(char *str)
 
 	for (i = 0; i < len; i++)
 		newstr[i] = str[i];
-
+	newstr[len] = '\0';
 
 
 	return (newstr);
