@@ -1,4 +1,4 @@
-#include "main.h"
+#include "function_pointers.h"
 /**
  * print_name - print a name that recived from user
  *@*name: the name will be printed
