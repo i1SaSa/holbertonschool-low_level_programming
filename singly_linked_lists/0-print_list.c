@@ -3,7 +3,7 @@
  * print_list - print the content of the linkedlist
  * @h: pointer to struct
  *
- * Retrun: number of nodes
+ * Retrun: number of nodes in the list
  */
 size_t print_list(const list_t *h)
 {
