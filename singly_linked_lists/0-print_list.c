@@ -1,5 +1,10 @@
 #include "lists.h"
-
+/**
+ * print_list - print the content of the linkedlist
+ * @h: pointer to struct
+ *
+ * Retrun: number of nodes
+ */
 size_t print_list(const list_t *h)
 {
 	int count = 0;
