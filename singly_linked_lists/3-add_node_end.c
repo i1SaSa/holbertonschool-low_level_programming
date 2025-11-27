@@ -1,52 +1,55 @@
-#include "lists.h"
 #include <stdlib.h>
 #include <string.h>
+#include "lists.h"
+
 /**
- * add_node_end - Adds a last node at the last of a singly linked list.
- * @head: Pointer to the pointer of the first node in the list.
- * @str: The string to be added to the last node.
+ * add_node_end - adds a node at the end of a list_t list
+ * @head: pointer to the pointer of the first node in the list
+ * @str: string to be stored in the new node
  *
- * Return: Address of the last element, or NULL if it failed.
+ * Return: address of the new element, or NULL on failure
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-    list_t *last;
-    list_t *curr;
-    unsigned int count = 0;
+	list_t *last;
+	list_t *curr;
+	unsigned int count = 0;
 
-    last = malloc(sizeof(list_t));
-    if (!last)
-        return (NULL);
+	last = malloc(sizeof(list_t));
+	if (!last)
+	{
+		return (NULL);
+	}
 
-    last->str = strdup(str);
-    if (last->str == NULL)
-    {
-        free(last);
-        return (NULL);
-    }
+	last->str = strdup(str);
+	if (last->str == NULL)
+	{
+		free(last);
+		return (NULL);
+	}
 
-    while (str[count])
-    {
-        ++count;
-    }
-    last->len = count;
+	while (str[count])
+	{
+		count++;
+	}
+	last->len = count;
 
-    last->next = NULL;
+	last->next = NULL;
 
-    if (*head == NULL)
-    {
-        *head = last;
-        return (last);
-    }
+	if (*head == NULL)
+	{
+		*head = last;
+		return (last);
+	}
 
-    curr = *head;
+	curr = *head;
 
-    while (curr->next != NULL)
-    {
-        curr = curr->next;
-    }
+	while (curr->next != NULL)
+	{
+		curr = curr->next;
+	}
 
-    curr->next = last;
+	curr->next = last;
 
-    return (last);
+	return (last);
 }
