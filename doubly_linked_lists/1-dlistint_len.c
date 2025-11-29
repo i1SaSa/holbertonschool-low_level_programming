@@ -2,7 +2,7 @@
 /**
 * dlistint_len - count the elemnt in the doubly linkedlist
 * @h: pointer that will count the element
-* 
+*
 * Return: count of nodes
 */
 size_t dlistint_len(const dlistint_t *h)
@@ -20,8 +20,8 @@ size_t dlistint_len(const dlistint_t *h)
 		++count;
 		if (h->next == NULL)
 			break;
-		else
-			h = h->next;
+
+		h = h->next;
 	}
 
 	return (count);
