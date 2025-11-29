@@ -2,7 +2,7 @@
 /**
  * print_dlistint - print every element in doubly linkedlist
  * @h: pointer to node
- * 
+ *
  * Return: count of nodes
  */
 size_t print_dlistint(const dlistint_t *h)
@@ -18,7 +18,7 @@ size_t print_dlistint(const dlistint_t *h)
 		current = current->prev;
 
 	while (current != NULL)
-    {
+	{
 		printf("%d\n", current->n);
 		current = current->next;
 		count++;
