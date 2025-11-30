@@ -1,9 +1,10 @@
 #include "lists.h"
 /**
+ *	add_dnodeint_end - add node at the end of the doubly list
+ *	@head: pointer to the currnet node
+ *	@n: the element of the node
  *
- *
- *
- *
+ *	Return: the end of the doubly list
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -25,6 +26,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	{
 		(*head) = (*head)->next;
 	}
+	end->prev = (*head);
 	(*head)->next = end;
 	return (end);
 }
