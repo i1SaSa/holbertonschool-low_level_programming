@@ -2,10 +2,10 @@
 /**
  * add_dnodeint - add node at the start of the doubly linkedlist
  * @head: pointer to the first node
- * @n:	
+ * @n: the elemnt of the pointer
  *
  * Return: in succes first node address,
- * 	if failed NULL
+ *	if failed NULL
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
@@ -21,7 +21,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	{
 		(*head)->prev = new;
 	}
-	
 
 	(*head) = new;
 	new->n = n;
