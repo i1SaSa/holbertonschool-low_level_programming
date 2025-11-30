@@ -15,11 +15,10 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	if (!new)
 		return (NULL);
-	while (new->prev != NULL)
-	{
+	
 	new->next = *head;
 	*head = new;
 	new->n = n;
-	}
+
 	return (new);
 }
