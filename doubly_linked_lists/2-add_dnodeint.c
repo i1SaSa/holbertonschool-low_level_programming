@@ -2,7 +2,7 @@
 /**
  * add_dnodeint - add node at the start of the doubly linkedlist
  * @head: pointer to the first node
- * @n: the elemnt of the pointer
+ * @n: the elemnt of the node
  *
  * Return: in succes first node address,
  *	if failed NULL
