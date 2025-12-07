@@ -6,7 +6,7 @@
  * @idx: is the index of the list where the new node should be added
  * @n: the element of the node
  *
- * Return: idx abone success, if faild NULL
+ * Return: idx upone success, if faild NULL
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
