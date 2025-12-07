@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 	fd_to = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
-		error_check(fd_from); 
+		error_check(fd_from);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
