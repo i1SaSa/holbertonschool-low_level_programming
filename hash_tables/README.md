@@ -1,0 +1,1 @@
+in this section we will explore the fundamentals of hash tables, a powerful data structure used for efficient data storage and retrieval. Hash tables utilize a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
