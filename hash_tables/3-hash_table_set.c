@@ -1,57 +1,49 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - Adds an element to the hash table.
- * @ht: The hash table you want to add or update the key/value to.
- * @key: The key. Cannot be an empty string.
- * @value: The value associated with the key. Must be duplicated.
+ * hash_table_set - adds an element to the hash table
+ * @ht: hash table to add or update the key/value to
+ * @key: the key (cannot be empty)
+ * @value: value associated with the key
  *
- * Return: 1 if it succeeded, 0 otherwise.
+ * Return: 1 if succeeded, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_node, *current;
-	char *value_copy;
-	unsigned long int index;
+	hash_node_t *node;
+	char *v_copy;
+	unsigned long int i;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-
-	value_copy = strdup(value);
-	if (value_copy == NULL)
+	v_copy = strdup(value);
+	if (v_copy == NULL)
 		return (0);
-
-	index = key_index((const unsigned char *)key, ht->size);
-
-	current = ht->array[index];
-	while (current != NULL)
+	i = key_index((const unsigned char *)key, ht->size);
+	for (node = ht->array[i]; node != NULL; node = node->next)
 	{
-		if (strcmp(current->key, key) == 0)
+		if (strcmp(node->key, key) == 0)
 		{
-			free(current->value);
-			current->value = value_copy;
+			free(node->value);
+			node->value = v_copy;
 			return (1);
 		}
-		current = current->next;
 	}
-
-	new_node = malloc(sizeof(hash_node_t));
-	if (new_node == NULL)
+	node = malloc(sizeof(hash_node_t));
+	if (node == NULL)
 	{
-		free(value_copy);
+		free(v_copy);
 		return (0);
 	}
-	new_node->key = strdup(key);
-	if (new_node->key == NULL)
+	node->key = strdup(key);
+	if (node->key == NULL)
 	{
-		free(new_node);
-		free(value_copy);
+		free(node);
+		free(v_copy);
 		return (0);
 	}
-	new_node->value = value_copy;
-
-	new_node->next = ht->array[index];
-	ht->array[index] = new_node;
-
+	node->value = v_copy;
+	node->next = ht->array[i];
+	ht->array[i] = node;
 	return (1);
 }
